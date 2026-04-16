@@ -56,7 +56,7 @@ public class SilverDasher {
 		}
 	}
 
-	private void ZI(ZoneInitEventArgs zoneInitEventArgs) {
+	private void ZI(object? sender, EventArgs e) {
 		Keeper.CurrentMobs.Clear();
 		Keeper.CurrentFates.Clear();
 	}
