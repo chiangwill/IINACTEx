@@ -1,0 +1,20 @@
+[
+  {
+    "Author": "Usagi, Latihas, chiangwill",
+    "Name": "IINACTEx",
+    "Punchline": "ACT parsing plugin for TC server",
+    "Description": "該插件會在一個類ACT的環境下運行FFXIV_ACT_Plugin與大量修改的Overlay Plugin以適配現代.NET。同時包含Triggernometry與PostNamazu。",
+    "InternalName": "IINACTEx",
+    "AssemblyVersion": "0.0.0.0",
+    "RepoUrl": "https://github.com/chiangwill/IINACTEx",
+    "ApplicableVersion": "any",
+    "DalamudApiLevel": 12,
+    "DownloadCount": 0,
+    "LastUpdate": 0,
+    "DownloadLinkInstall": "https://github.com/chiangwill/IINACTEx/releases/latest/download/latest.zip",
+    "DownloadLinkUpdate": "https://github.com/chiangwill/IINACTEx/releases/latest/download/latest.zip",
+    "DownloadLinkTesting": "https://github.com/chiangwill/IINACTEx/releases/latest/download/latest.zip",
+    "IsHide": false,
+    "IsTestingExclusive": false
+  }
+]
