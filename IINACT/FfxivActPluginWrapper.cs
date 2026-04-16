@@ -119,7 +119,11 @@ public partial class FfxivActPluginWrapper : IDisposable {
 			Dalamud.Game.ClientLanguage.English => Language.English,
 			Dalamud.Game.ClientLanguage.German => Language.German,
 			Dalamud.Game.ClientLanguage.French => Language.French,
-			_ => Plugin.DataManager.Language.ToString() == "ChineseSimplified" ? Language.Chinese : Language.English //非CN SDK无ChineseSimplified
+			_ => Plugin.DataManager.Language.ToString() switch {
+				"ChineseSimplified" => Language.Chinese,
+				"ChineseTraditional" => Language.English, //繁中服使用Global ACT Plugin，語言解析用English
+				_ => Language.English
+			} //非CN/TC SDK无ChineseSimplified/ChineseTraditional
 		};
 
 	public void Dispose() {

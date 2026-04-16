@@ -135,7 +135,11 @@ public sealed class Plugin : IDalamudPlugin {
 		});
 		if (!Configuration.AsyncOnInit) TaskFetchDependencies.Wait();
 		if (!Directory.Exists(PluginActScriptDirectory)) Directory.CreateDirectory(PluginActScriptDirectory);
-		var region = DataManager.Language.ToString() == "ChineseSimplified" ? GameRegion.Chinese : GameRegion.Global; //非CN SDK无ChineseSimplified
+		var region = DataManager.Language.ToString() switch {
+			"ChineseSimplified" => GameRegion.Chinese,
+			"ChineseTraditional" => GameRegion.TraditionalChinese,
+			_ => GameRegion.Global
+		};
 		if (opcodestxtCanReplace) {
 			try {
 				var d1 = OpcodeManager.Instance._opcodes[region].ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
